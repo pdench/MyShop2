@@ -32,13 +32,13 @@ namespace MyShop.DataAccess.InMemory
             products.Add(p);
         }
 
-        public void Update (Product p)
+        public void Update (Product prod)
         {
-            Product productToUpdate = products.Find(p => p.Id == p.Id);
+            Product productToUpdate = products.Find(p => p.Id == prod.Id);
 
             if (productToUpdate!=null)
             {
-                productToUpdate = p;
+                productToUpdate = prod;
             }
             else
             {
